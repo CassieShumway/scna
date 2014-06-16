@@ -1,20 +1,36 @@
 ---
 layout: default
 ---
+<section class="hero-image">
+  <span class="hero-tint"></span>
+    <div class="header-box">
+    <img src="/images/scna-white-logo.png">
+    </div>
+</section>
 
-<div class="home">
+<section class="white-section">
+  <div class="single-column-wrapper">
+    <img class="homepage-logo" src="/images/scna-short-logo.png">
+    <h1>Chicago 2014</h1>
+    <h2>September 5th-6th</h2>
+    <hr>
+    <p>SCNA is a conference for software professionals interested in improving their craft, their community, and themselves.</p>
+  </div>
+</section>
 
-  <h1>Posts</h1>
-
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+<section class="white-section">
+  <div class="wrapper cf">
+    <div class="column third">
+      <h3>Learn</h3>
+      <p>learning and teaching to improve ourselves.</p>
+    </div>
+    <div class="column third">
+      <h3>Collaborate</h3>
+      <p>providing an opportunity to connect and develop productive partnerships.</p>
+    </div>
+    <div class="column third">
+      <h3>Build</h3>
+      <p>building and celebrating a community of professionals while defining the industry.</p>
+    </div>
+  </div>
+</section>
