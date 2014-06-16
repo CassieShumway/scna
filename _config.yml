@@ -3,7 +3,7 @@ title: SCNA
 email: cassieshumway@gmail.com
 description: "Redesign SCNA website for 2014"
 baseurl: ""
-url: "http://cassieshumway.github.io/scna"
+url: "http://cassieshumway.github.io/scna/"
 
 # Build settings
 markdown: kramdown
