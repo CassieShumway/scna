@@ -105,7 +105,7 @@ li {
 
 .hero-image {
   background: #2D2D2D;
-  background-image: url("/images/scna-hero.jpg");
+  background-image: url("../images/scna-hero.jpg");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
