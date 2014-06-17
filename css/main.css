@@ -39,7 +39,7 @@ hr {
 
 .divider-short { width: 30px;}
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .divider-short {display: none; }
 }
 
@@ -175,9 +175,7 @@ li {
   z-index: 100;
 }
 
-@media (max-width: 600px) {
-  .hero-image { padding: 3em 0; }
-}
+@media (max-width: 600px) { .hero-image { padding: 3em 0; } }
 
 /* =================================
   HOMEPAGE - SCNA INTRO
@@ -216,7 +214,10 @@ form {
   font-family: "omnes-pro", sans-serif;
   font-size: 1em;
   font-weight: 500;
+  margin: 0 auto;
+  margin-top: 4em;
   text-align: left;
+
 }
 
 input[type="email"],
@@ -247,6 +248,23 @@ textarea {
 ::-moz-placeholder { color: #bbb; }
 :-ms-input-placeholder { color: #bbb; }
 
+@media (max-width: 900px) {
+  form {
+    display: inline-block;
+    margin-top: 2em;
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .input-column {
+    float: none;
+    margin-left: 0;
+    margin-bottom: 2em;
+    padding: 0 .5em;
+    width: 100%;
+  }
+}
+
 /* =================================
   WRAPPER
    ============================== */
@@ -264,9 +282,7 @@ textarea {
   max-width: 320px;
 }
 
-@media (max-width: 900px) {
-  .wrapper { width: 100%; }
-}
+@media (max-width: 900px) { .wrapper { width: 100%; } }
 
 /* =================================
   IMAGES
@@ -322,15 +338,13 @@ img {
 @media (max-width: 900px) {
   .column {
     float: none;
-    margin-left: none;
+    margin-left: 0;
     width: 100%;
   }
 
   .third {
     border-bottom: 1px solid #ddd;
     margin-bottom: 2em;
-    margin-left: 0;
-    width: 100%;
   }
 
   .third:last-child { border-bottom: none; }
@@ -345,7 +359,10 @@ img {
   UTILITIES
    ============================== */
 
-
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
 
 /* =================================
   CLEAR FIX
