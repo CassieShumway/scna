@@ -267,7 +267,7 @@ textarea {
   max-width: 320px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .wrapper { width: 100%; }
 }
 
@@ -322,7 +322,7 @@ img {
 .half { width: 47.5%; }
 .third { width: 30%; }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .column {
     float: none;
     margin-left: none;
@@ -331,7 +331,7 @@ img {
 
   .third {
     border-bottom: 1px solid #ddd;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     margin-left: 0;
     width: 100%;
   }
