@@ -39,9 +39,7 @@ hr {
 
 .divider-short { width: 30px;}
 
-@media (max-width: 900px) {
-  .divider-short {display: none; }
-}
+@media (max-width: 900px) { .divider-short {display: none; } }
 
 /* =================================
   TYPOGRAPHY
@@ -55,13 +53,13 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 2em;
   font-weight: 600;
   line-height: 0.8em;
   margin-bottom: .5em;
 }
 
-h2 { font-size: 1.81em; }
+h2 { font-size: 1.47em; }
 
 h3 { font-size: 1.3em; }
 
@@ -137,6 +135,25 @@ li {
  }
 
 /* =================================
+  WRAPPER
+   ============================== */
+
+.wrapper {
+  margin: 0 auto;
+  text-align: center;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.single-column-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 260px;
+}
+
+@media (max-width: 900px) { .wrapper { width: 100%; } }
+
+/* =================================
   HOMEPAGE - HERO IMAGE
    ============================== */
 
@@ -199,7 +216,7 @@ li {
 
 .button-register p {
   color: #fff;
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: 500;
   line-height: 0;
   text-align: center;
@@ -251,7 +268,7 @@ textarea {
 @media (max-width: 900px) {
   form {
     display: inline-block;
-    margin-top: 2em;
+    margin-top: 1em;
     width: 100%;
     max-width: 340px;
   }
@@ -264,25 +281,6 @@ textarea {
     width: 100%;
   }
 }
-
-/* =================================
-  WRAPPER
-   ============================== */
-
-.wrapper {
-  margin: 0 auto;
-  text-align: center;
-  width: 90%;
-  max-width: 1200px;
-}
-
-.single-column-wrapper {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 320px;
-}
-
-@media (max-width: 900px) { .wrapper { width: 100%; } }
 
 /* =================================
   IMAGES
@@ -318,7 +316,7 @@ img {
 
 @media (max-width: 600px) {
   .white-section { padding: 1em 0;}
-  .grey-section { padding: 1em 0;}
+  .grey-section { padding: 2em 0;}
 }
 
 /* =================================
