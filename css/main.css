@@ -20,16 +20,27 @@ body {
   padding: 0;
 }
 
-a { color: #fff; }
+a {
+  color: #fff;
+  text-decoration: none;
+}
 
 a:hover { color: #00ADEE; }
 
+.blue-text { color: #00ADEE; }
+
 hr {
   border: 0;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #B8B6B6;
   height: 0;
-  margin: 2em auto;
+  margin: 1.8em auto;
   width: 100%;
+}
+
+.divider-short { width: 30px;}
+
+@media (max-width: 600px) {
+  .divider-short {display: none; }
 }
 
 /* =================================
@@ -39,17 +50,18 @@ hr {
 h1, h2, h3, h4 {
   font-weight: 500;
   margin: 0;
+  text-align: center;
   text-transform: uppercase;
 }
 
 h1 {
-  color: #00ADEE;
-  font-size: 2.7em;
+  font-size: 2.5em;
+  font-weight: 600;
   line-height: 0.8em;
   margin-bottom: .5em;
 }
 
-h2 { font-size: 1.92em; }
+h2 { font-size: 1.81em; }
 
 h3 { font-size: 1.3em; }
 
@@ -62,7 +74,10 @@ p {
   LISTS
    ============================== */
 
-ul { float: right; }
+ul {
+  float: right;
+  width: 100%;
+}
 
 li {
   float: left;
@@ -84,7 +99,7 @@ li {
   margin: 0 auto;
   padding: 0;
   width: 90%;
-  max-width: 1600px;
+  max-width: 1200px;
 }
 
 .navigation li {
@@ -100,8 +115,32 @@ li {
   vertical-align: middle;
 }
 
+@media (max-width: 600px) {
+  .small-logo {
+    float: none;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
+
+  .navigation ul {
+    float: none;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    padding: 0;
+    }
+
+  .navigation li {
+    display: block;
+    float: none;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+  }
+ }
+
 /* =================================
-  HERO IMAGE
+  HOMEPAGE - HERO IMAGE
    ============================== */
 
 .hero-image {
@@ -139,6 +178,78 @@ li {
   z-index: 100;
 }
 
+@media (max-width: 600px) {
+  .hero-image { padding: 3em 0; }
+}
+
+/* =================================
+  HOMEPAGE - SCNA INTRO
+   ============================== */
+
+.homepage-logo {
+  margin: 2em 0;
+  width: 100%;
+}
+
+.button-register {
+  background: #2D2D2D;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  height: 3em;
+  margin: 2em 0;
+  padding: .5em;
+  width: 100%;
+}
+
+.button-register p {
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 500;
+  line-height: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* =================================
+  HOMEPAGE - MAILING LIST SECTION
+   ============================== */
+
+form {
+  font-family: "omnes-pro", sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  text-align: left;
+}
+
+input[type="email"],
+input[type="text"],
+textarea {
+  border: 1px solid #DDD;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-weight: 300;
+  margin-bottom: .5em;
+  -webkit-appearance: none;
+  width: 100%;
+  padding: 0.3em;
+  line-height: 1.5;
+}
+
+.input-column {
+  float: left;
+  margin-left: 5%;
+  width: 29.5%;
+}
+
+.input-column:first-child { margin-left: 0;}
+
+::-webkit-input-placeholder { color: #bbb; }
+:-moz-placeholder { color: #bbb; }
+::-moz-placeholder { color: #bbb; }
+:-ms-input-placeholder { color: #bbb; }
+
 /* =================================
   WRAPPER
    ============================== */
@@ -152,8 +263,12 @@ li {
 
 .single-column-wrapper {
   margin: 0 auto;
-  width: 90%;
-  max-width: 340px;
+  width: 100%;
+  max-width: 320px;
+}
+
+@media (max-width: 600px) {
+  .wrapper { width: 100%; }
 }
 
 /* =================================
@@ -167,46 +282,30 @@ img {
   max-width: 100%;
 }
 
-.homepage-logo {
-  margin: 2em 0;
+.homepage-diamond {
+  margin: 0 auto;
+  margin-bottom: 2em;
   width: 100%;
-  max-width: 400px;
+  max-width: 250px;
 }
 
 /* =================================
   SECTIONS
    ============================== */
 
-.white-section { padding: 2em 0; }
-
-/* =================================
-  BOXES
-   ============================== */
-
-
-
-/* =================================
-  BUTTONS
-   ============================== */
-
-.button-register {
-  background: #2D2D2D;
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  height: 3em;
-  margin-bottom: 2em;
-  padding: .5em;
-  width: 100%;
+.white-section {
+  border-bottom: 1px solid #ddd;
+  padding: 4em 0;
 }
 
-.button-register p {
-  color: #fff;
-  font-size: 1.1em;
-  font-weight: 500;
-  line-height: 0;
-  text-align: center;
-  text-transform: uppercase;
+.grey-section {
+  background: #e3e3e3;
+  padding: 4em 0;
+}
+
+@media (max-width: 600px) {
+  .white-section { padding: 1em 0;}
+  .grey-section { padding: 1em 0;}
 }
 
 /* =================================
@@ -223,23 +322,33 @@ img {
 .half { width: 47.5%; }
 .third { width: 30%; }
 
-/* =================================
-  MEDIA QUERIES
-   ============================== */
+@media (max-width: 600px) {
+  .column {
+    float: none;
+    margin-left: none;
+    width: 100%;
+  }
 
-@media (max-width: 990px) {
+  .third {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1em;
+    margin-left: 0;
+    width: 100%;
+  }
 
- }
+  .third:last-child { border-bottom: none; }
+
+  .column-box {
+    padding: 0 .5em;
+    text-align: center;
+  }
+}
 
 /* =================================
   UTILITIES
    ============================== */
 
-.margin-top { margin-top: 1.5em; }
-.margin-bottom-none { margin-bottom: 0;}
 
-.text-left { text-align: left; }
-.text-right { text-align: right; }
 
 /* =================================
   CLEAR FIX
