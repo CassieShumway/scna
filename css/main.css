@@ -74,10 +74,7 @@ p {
   LISTS
    ============================== */
 
-ul {
-  float: right;
-  width: 100%;
-}
+ul { float: right; }
 
 li {
   float: left;
@@ -128,7 +125,7 @@ li {
     margin: 0 auto;
     margin-bottom: 1em;
     padding: 0;
-    }
+  }
 
   .navigation li {
     display: block;
