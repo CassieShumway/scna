@@ -72,19 +72,13 @@ p {
   LISTS
    ============================== */
 
-ul { float: right; }
-
-li {
-  float: left;
-  list-style: none;
-  padding-left: 1em;
-}
+li { list-style: none; }
 
 /* =================================
   NAVIGATION
    ============================== */
 
-.navigation {
+nav {
   background: #2D2D2D;
   color: #fff;
   height: auto;
@@ -97,38 +91,44 @@ li {
   max-width: 1200px;
 }
 
-.navigation li {
+nav ul { float: right; }
+
+nav li {
+  float: left;
   font-size: 1em;
   font-weight: 500;
+  margin-left: 1em;
 }
 
-.small-logo {
+.nav-logo {
   float: left;
   padding-top: 1em;
-  width: 100%;
-  max-width: 70px;
-  vertical-align: middle;
 }
 
-@media (max-width: 600px) {
-  .small-logo {
-    float: none;
+.white-logo { max-width: 70px; }
+
+@media only screen and (max-width: 600px) {
+  .nav-logo {
+    float: 0;
     display: block;
     margin: 0 auto;
     margin-bottom: 1em;
+    width: 100%;
   }
 
-  .navigation ul {
+  nav ul {
+    float: 0;
     float: none;
     margin: 0 auto;
     margin-bottom: 1em;
     padding: 0;
+    width: 100%;
   }
 
-  .navigation li {
+  nav li {
     display: block;
-    float: none;
-    padding: 0;
+    float: 0;
+    margin-left: 0;
     text-align: center;
     width: 100%;
   }
@@ -203,24 +203,32 @@ li {
   width: 100%;
 }
 
-.button-register {
+/* =================================
+  HOMEPAGE - BUTTONS
+   ============================== */
+
+.button {
   background: #2D2D2D;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  height: 3em;
-  margin: 2em 0;
+  display: inline-block;
   padding: .5em;
-  width: 100%;
+  -webkit-appearance: none;
+  border: none;
 }
 
-.button-register p {
+input[type="submit"],
+.register {
   color: #fff;
   font-size: 1em;
   font-weight: 500;
+  height: 3em;
+  margin: 2em 0;
   line-height: 0;
   text-align: center;
   text-transform: uppercase;
+  width: 100%;
 }
 
 /* =================================
@@ -264,6 +272,13 @@ textarea {
 :-moz-placeholder { color: #bbb; }
 ::-moz-placeholder { color: #bbb; }
 :-ms-input-placeholder { color: #bbb; }
+
+input[type="email"]:focus,
+input[type="text"]:focus,
+textarea:focus {
+  border: 1px solid #00ADEE;
+  outline: none;
+}
 
 @media (max-width: 900px) {
   form {
@@ -351,6 +366,23 @@ img {
     padding: 0 .5em;
     text-align: center;
   }
+}
+
+/* =================================
+  FOOTER
+   ============================== */
+
+.site-footer {
+  background: #e3e3e3;
+  padding: 1em 0;
+  margin: 0 auto;
+  width: 100%;
+}
+
+footer p {
+  color: #C0C0C0;
+  font-size: 1em;
+  text-align: center;
 }
 
 /* =================================
