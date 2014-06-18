@@ -39,7 +39,13 @@ hr {
 
 .divider-short { width: 30px;}
 
-@media (max-width: 900px) { .divider-short {display: none; } }
+img {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 2em;
+  max-width: 100%;
+}
 
 /* =================================
   TYPOGRAPHY
@@ -54,7 +60,6 @@ h1, h2, h3, h4 {
 
 h1 {
   font-size: 2em;
-  font-weight: 600;
   line-height: 0.8em;
   margin-bottom: .5em;
 }
@@ -63,14 +68,25 @@ h2 { font-size: 1.47em; }
 
 h3 { font-size: 1.3em; }
 
+h4 {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
 p {
-  font-size: 1.3em;
+  font-size: 1.2em;
   text-align: left;
 }
 
 /* =================================
   LISTS
    ============================== */
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+ul { font-size: 1.2em; }
 
 li { list-style: none; }
 
@@ -82,6 +98,7 @@ nav {
   background: #2D2D2D;
   color: #fff;
   height: auto;
+  padding: 1em 0;
 }
 
 .nav-wrapper {
@@ -91,7 +108,10 @@ nav {
   max-width: 1200px;
 }
 
-nav ul { float: right; }
+nav ul {
+  float: right;
+  font-size: 1em;
+}
 
 nav li {
   float: left;
@@ -100,19 +120,20 @@ nav li {
   margin-left: 1em;
 }
 
-.nav-logo {
-  float: left;
-  padding-top: 1em;
+.nav-logo { float: left; }
+
+.white-logo {
+  margin-bottom: 0;
+  max-width: 70px;
 }
 
-.white-logo { max-width: 70px; }
-
 @media only screen and (max-width: 600px) {
+  nav { padding-bottom: 1em;}
+
   .nav-logo {
     float: 0;
     display: block;
     margin: 0 auto;
-    margin-bottom: 1em;
     width: 100%;
   }
 
@@ -138,20 +159,26 @@ nav li {
   WRAPPER
    ============================== */
 
-.wrapper {
+.wrapper-large {
   margin: 0 auto;
   text-align: center;
   width: 90%;
   max-width: 1200px;
 }
 
-.single-column-wrapper {
+.wrapper-medium {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 370px;
+}
+
+.wrapper-small {
   margin: 0 auto;
   width: 100%;
   max-width: 260px;
 }
 
-@media (max-width: 900px) { .wrapper { width: 100%; } }
+@media (max-width: 900px) { .wrapper-large { width: 100%; } }
 
 /* =================================
   HOMEPAGE - HERO IMAGE
@@ -195,15 +222,6 @@ nav li {
 @media (max-width: 600px) { .hero-image { padding: 3em 0; } }
 
 /* =================================
-  HOMEPAGE - SCNA INTRO
-   ============================== */
-
-.homepage-logo {
-  margin: 2em 0;
-  width: 100%;
-}
-
-/* =================================
   HOMEPAGE - BUTTONS
    ============================== */
 
@@ -216,18 +234,18 @@ nav li {
   padding: .5em;
   -webkit-appearance: none;
   border: none;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 input[type="submit"],
-.register {
+.primary {
   color: #fff;
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 400;
   height: 3em;
-  margin: 2em 0;
+  margin-top: 2em;
   line-height: 0;
-  text-align: center;
-  text-transform: uppercase;
   width: 100%;
 }
 
@@ -242,7 +260,6 @@ form {
   margin: 0 auto;
   margin-top: 4em;
   text-align: left;
-
 }
 
 input[type="email"],
@@ -298,28 +315,70 @@ textarea:focus {
 }
 
 /* =================================
+  SCHEDULE - TIMELINE
+   ============================== */
+
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.timeline:before {
+  background: #DBF5F8;
+  content: " ";
+  position: absolute;
+  top: 20px;
+  left: 20%;
+  bottom: 0;
+  width: 1px;
+}
+
+.timeline li {
+  position: relative;
+}
+
+.timeline-box {
+  margin: 0 0 2rem 40%;
+  position: relative;
+}
+
+.time {
+  background: #fff;
+  color: #00ADEE;
+  height: 40px;
+  left: 14%;
+  top: 70px;
+  position: absolute;
+}
+
+
+.timeline-text { margin-top: 1em; }
+.timeline-text h4 { text-align: left; }
+.timeline-text p { font-size: 1em; }
+
+/* =================================
   IMAGES
    ============================== */
 
-img {
-  display: block;
-  height: auto;
-  margin: 0 auto;
-  max-width: 100%;
+.homepage-diamond { max-width: 250px; }
+.plain-diamond { max-width: 100px; }
+
+.speaker-diamond {
+  margin: 0;
+  max-width: 160px;
 }
 
-.homepage-diamond {
-  margin: 0 auto;
-  margin-bottom: 2em;
-  width: 100%;
-  max-width: 250px;
-}
+.company-logo { max-width: 100px; }
+.sponsor-logo { max-width: 200px; }
 
 /* =================================
   SECTIONS
    ============================== */
 
 .white-section {
+  background: #fff;
   border-bottom: 1px solid #ddd;
   padding: 4em 0;
 }
@@ -329,14 +388,24 @@ img {
   padding: 4em 0;
 }
 
+.pattern-section {
+  background-image: url("../images/pattern.jpg");
+  border-bottom: 1px solid #ddd;
+  padding: 4em 0;
+}
+
 @media (max-width: 600px) {
-  .white-section { padding: 1em 0;}
-  .grey-section { padding: 2em 0;}
+  .white-section, .grey-section, .pattern-section { padding: 1.5em 0; }
 }
 
 /* =================================
   COLUMNS
    ============================== */
+
+.row {
+	margin: 2em 0;
+	overflow: hidden;
+}
 
 .column {
   float: left;
@@ -347,6 +416,12 @@ img {
 
 .half { width: 47.5%; }
 .third { width: 30%; }
+.two-third { width: 20%; }
+
+.text-box {
+  margin: 0 auto;
+  max-width: 260px;
+}
 
 @media (max-width: 900px) {
   .column {
@@ -358,21 +433,24 @@ img {
   .third {
     border-bottom: 1px solid #ddd;
     margin-bottom: 2em;
+    width: 100%;
   }
 
   .third:last-child { border-bottom: none; }
 
-  .column-box {
-    padding: 0 .5em;
-    text-align: center;
-  }
+  .text-box {
+    max-width: 100%;
+    padding: 0 1em;
+    }
+
+  .text-box p { text-align: center; }
 }
 
 /* =================================
   FOOTER
    ============================== */
 
-.site-footer {
+footer {
   background: #e3e3e3;
   padding: 1em 0;
   margin: 0 auto;
@@ -380,8 +458,9 @@ img {
 }
 
 footer p {
-  color: #C0C0C0;
+  color: #A7A7A7;
   font-size: 1em;
+  margin: 0;
   text-align: center;
 }
 
@@ -393,6 +472,10 @@ footer p {
   margin: 0 auto;
   text-align: center;
 }
+
+.margin-bottom { margin-bottom: 5em; }
+.margin-bottom-small { margin-bottom: .7em; }
+.margin-bottom-none { margin-bottom: 0; }
 
 /* =================================
   CLEAR FIX
