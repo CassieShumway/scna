@@ -58,6 +58,11 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
 }
 
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 h1 {
   font-size: 2.31em;
   line-height: 0.8em;
@@ -203,7 +208,6 @@ nav li {
 
 .header-box {
   margin: 0 auto;
-  padding: 1em .5em;
   text-align: center;
   width: 100%;
   max-width: 370px;
@@ -217,40 +221,43 @@ nav li {
   HOMEPAGE - BUTTONS
    ============================== */
 
-.button {
+button {
   background: #2D2D2D;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  color: #fff;
   display: inline-block;
   padding: .5em;
   -webkit-appearance: none;
   border: none;
   text-align: center;
   text-transform: uppercase;
+  width: 100%;
 }
 
-input[type="submit"],
 .primary {
-  color: #fff;
+  background: 0;
+  border: 1px solid #fff;
   font-size: 1em;
   font-weight: 400;
   height: 3em;
   margin-top: 2em;
   line-height: 0;
-  width: 100%;
 }
+
+.primary:hover { background: rgba(45, 45, 45, 0.8); }
 
 /* =================================
   HOMEPAGE - MAILING LIST SECTION
    ============================== */
 
 form {
-  font-family: "omnes-pro", sans-serif;
+  font-family: "brandon-grotesque",sans-serif;
   font-size: 1em;
   font-weight: 500;
   margin: 0 auto;
-  margin-top: 4em;
+  margin-top: 3em;
   text-align: left;
 }
 
@@ -269,10 +276,10 @@ textarea {
   line-height: 1.5;
 }
 
-::-webkit-input-placeholder { color: #bbb; }
-:-moz-placeholder { color: #bbb; }
-::-moz-placeholder { color: #bbb; }
-:-ms-input-placeholder { color: #bbb; }
+::-webkit-input-placeholder { color: #bbb;}
+:-moz-placeholder { color: #bbb;}
+::-moz-placeholder { color: #bbb;}
+:-ms-input-placeholder { color: #bbb;}
 
 input[type="email"]:focus,
 input[type="text"]:focus,
@@ -280,6 +287,17 @@ textarea:focus {
   border: 1px solid #00ADEE;
   outline: none;
 }
+
+button[type="submit"],
+.submit-button {
+  -webkit-appearance: none;
+  border: none;
+  background: #555;
+  font-size: .9em;
+}
+
+button[type="submit"]:hover,
+.submit-button:hover { background: #6D6D6D; }
 
 @media (max-width: 900px) {
   form {
@@ -343,6 +361,8 @@ textarea:focus {
 }
 
 .homepage-logo { max-width: 285px; }
+.homepage-icons { max-height: 60px; }
+
 .hundred { max-width: 100px; }
 .two-hundred { max-width: 200px; }
 .two-fifty { max-width: 250px; }
@@ -407,6 +427,7 @@ textarea:focus {
   .third {
     border-bottom: 1px solid #ddd;
     margin-bottom: 2em;
+    padding-bottom: 1em;
     width: 100%;
   }
 
