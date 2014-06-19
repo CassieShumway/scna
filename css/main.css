@@ -31,7 +31,7 @@ a:hover { color: #00ADEE; }
 
 hr {
   border: 0;
-  border-top: 1px solid #B8B6B6;
+  border-top: 1px solid #E4E4E4;
   height: 0;
   margin: 1.8em auto;
   width: 100%;
@@ -59,12 +59,12 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2.31em;
   line-height: 0.8em;
   margin-bottom: .5em;
 }
 
-h2 { font-size: 1.47em; }
+h2 { font-size: 1.7em; }
 
 h3 { font-size: 1.3em; }
 
@@ -159,26 +159,18 @@ nav li {
   WRAPPER
    ============================== */
 
-.wrapper-large {
+.wrapper {
   margin: 0 auto;
+  padding: 0 .5em;
   text-align: center;
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
 }
 
-.wrapper-medium {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 370px;
-}
-
-.wrapper-small {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 260px;
-}
-
-@media (max-width: 900px) { .wrapper-large { width: 100%; } }
+.large { max-width: 500px; }
+.medium { max-width: 370px; }
+.small { max-width: 310px; }
+.xsmall { max-width: 200px; }
 
 /* =================================
   HOMEPAGE - HERO IMAGE
@@ -277,14 +269,6 @@ textarea {
   line-height: 1.5;
 }
 
-.input-column {
-  float: left;
-  margin-left: 5%;
-  width: 29.5%;
-}
-
-.input-column:first-child { margin-left: 0;}
-
 ::-webkit-input-placeholder { color: #bbb; }
 :-moz-placeholder { color: #bbb; }
 ::-moz-placeholder { color: #bbb; }
@@ -303,14 +287,6 @@ textarea:focus {
     margin-top: 1em;
     width: 100%;
     max-width: 340px;
-  }
-
-  .input-column {
-    float: none;
-    margin-left: 0;
-    margin-bottom: 2em;
-    padding: 0 .5em;
-    width: 100%;
   }
 }
 
@@ -353,7 +329,6 @@ textarea:focus {
   position: absolute;
 }
 
-
 .timeline-text { margin-top: 1em; }
 .timeline-text h4 { text-align: left; }
 .timeline-text p { font-size: 1em; }
@@ -362,16 +337,15 @@ textarea:focus {
   IMAGES
    ============================== */
 
-.homepage-diamond { max-width: 250px; }
-.plain-diamond { max-width: 100px; }
-
 .speaker-diamond {
   margin: 0;
   max-width: 160px;
 }
 
-.company-logo { max-width: 100px; }
-.sponsor-logo { max-width: 200px; }
+.homepage-logo { max-width: 285px; }
+.hundred { max-width: 100px; }
+.two-hundred { max-width: 200px; }
+.two-fifty { max-width: 250px; }
 
 /* =================================
   SECTIONS
@@ -379,7 +353,7 @@ textarea:focus {
 
 .white-section {
   background: #fff;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ECEBEB;
   padding: 4em 0;
 }
 
@@ -390,7 +364,7 @@ textarea:focus {
 
 .pattern-section {
   background-image: url("../images/pattern.jpg");
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ECEBEB;
   padding: 4em 0;
 }
 
@@ -473,7 +447,7 @@ footer p {
   text-align: center;
 }
 
-.margin-bottom { margin-bottom: 5em; }
+.margin-bottom { margin-bottom: 4em; }
 .margin-bottom-small { margin-bottom: .7em; }
 .margin-bottom-none { margin-bottom: 0; }
 
