@@ -34,7 +34,7 @@ a:hover {
   color: #8ad9f6;
 }
 
-.blue-text { color: #2d2d2d; }
+.blue-text { color: #00adee; }
 
 hr {
   border: 0;
@@ -81,19 +81,23 @@ h4 {
 }
 
 h5, h6 {
-  font-weight: 300;
-  font-size: 1.1em;
   margin: 0;
   margin-bottom: 1em;
   text-align: left;
 }
 
 h5 {
-  color: #00adee;
+  color: #888;
+  font-size: 1em;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
-h6 { color: #888; }
+h6 {
+  color: #888;
+  font-size: 1.1em;
+  font-weight: 300;
+}
 
 p {
   margin-top: 0;
@@ -345,6 +349,12 @@ button[type="submit"]:hover,
   SCHEDULE - TIMELINE
    ============================== */
 
+.date {
+  color: #888;
+  font-weight: 600;
+  font-size: .9em;
+}
+
 .speaker {
   display: inline-block;
   /*height: 100%;
@@ -361,10 +371,7 @@ button[type="submit"]:hover,
 
 .time {
   background: #fff;
-  color: #888;
-  font-size: .9em;
-  height: 40px;
-  left: 12%;
+  left: 10%;
   top: 0;
   position: absolute;
 }
@@ -377,11 +384,11 @@ button[type="submit"]:hover,
 }
 
 .timeline:before {
-  background: #dbf5f8;
+  background: #ecebeb;
   content: " ";
   position: absolute;
   top: 20px;
-  left: 20%;
+  left: 15%;
   bottom: 0;
   width: 1px;
 }
@@ -453,9 +460,10 @@ section {
 
 .column:first-child { margin-left: 0; }
 
+.two-third { width: 20%; }
 .half { width: 47.5%; }
 .third { width: 30%; }
-.two-third { width: 20%; }
+.fourth { width: 25%; }
 
 .text-box {
   margin: 0 auto;

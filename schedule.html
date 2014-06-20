@@ -2,22 +2,49 @@
 layout: default
 ---
 
-<section class="white">
-    <h1>Schedule</h1>
-    <hr>
+<section class="pattern">
+  <h1>Schedule</h1>
+  <hr class="margin-bottom">
+  <div class="wrapper cf">
+    <a href="#thursday">
+      <div class="column fourth">
+        <span class="date">9.4.14</span>
+        <h4>Thursday</h4>
+      </div>
+    </a>
+    <a href="#friday">
+      <div class="column fourth">
+        <span class="date">9.5.14</span>
+        <h4>Friday</h4>
+      </div>
+    </a>
+    <a href="#saturday">
+      <div class="column fourth">
+      <span class="date">9.6.14</span>
+      <h4>Saturday</h4>
+      </div>
+    </a>
+    <a href="#sunday">
+      <div class="column fourth">
+      <span class="date">9.7.14</span>
+      <h4>Sunday</h4>
+      </div>
+    </a>
+  </div>
+</section>
 
+<section id="friday">
+<section class="white">
   <div class="wrapper">
     <ul class="timeline">
-      <!-- <li>
-        <div class="time">THURSDAY</div>
-          <div class="timeline-box">
-            <div class="timeline-text">
-              YES
-            </div>
-          </div>
-      </li> -->
       <li>
-        <div class="time">8:00am-9:00am</div>
+        <h4 class="time blue-text">THURSDAY</h4>
+          <div class="timeline-box">
+            <div class="timeline-text">&nbsp;</div>
+          </div>
+      </li>
+      <li>
+        <span class="date time">8:00am-9:00am</span>
           <div class="timeline-box">
             <div class="timeline-text">
               <h5>Breakfast</h5>
@@ -25,12 +52,10 @@ layout: default
           </div>
       </li>
       <li>
-        <div class="time">9:00am-9:30am</div>
+        <span class=" date time">9:00am-9:30am</span>
           <div class="timeline-box">
-            <img class="speaker bob" src="{{ site.baseurl }}/images/speaker-bob.png">
+            <img class="speaker-diamond" src="{{ site.baseurl }}/images/speaker-bob.png">
             <div class="timeline-text">
-
-
               <h5>Robert C. Martin (“Uncle Bob”)</h5>
               <h6>Specification Discipline</h6>
               <p>The first bullet in the “XP Developer Bill of Rights” is: “Programmers have a right to know what is needed...” In other words, they have a right to know the requirements. But rights and responsibilities go hand in hand. The fact that we have the right to know what is needed means that we have the responsibility to find out what is needed. That means that programmers play a critical role in the specification of systems. We’ve learned, over the last few decades, that the best way to specify a system is with tests. So specification disciplines are test disciplines. What are those disciplines? What are the responsibilities that programmers have? What responsibilities do customers, product owners, business analysts, and QA have? Given that specification error is one of the primary reasons for project failure; what must craftsmen do to mitigate and eliminate such errors?</p>
@@ -40,7 +65,7 @@ layout: default
           </div>
       </li>
       <li>
-        <div class="time">09:30am-10:00am</div>
+        <div class="time">9:30am-10:00am</div>
           <div class="timeline-box">
             <div class="timeline-text">
               <h5>Break and Lightning Talks</h5>
