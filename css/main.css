@@ -222,7 +222,6 @@ nav li {
 
 .hero-image {
   background: #2d2d2d;
-  background-image: url("../images/scna-hero.jpg");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -233,6 +232,18 @@ nav li {
   position: relative;
   text-align: center;
   width: 100%;
+}
+
+.homepage-hero { background-image: url("../images/scna-hero.jpg"); }
+
+.sponsors-hero {
+  background-image: url("../images/hero2.jpg");
+  background-position: center;
+}
+
+.sponsors-hero-two {
+  background-image: url("../images/hero4.jpg");
+  background-position: center;
 }
 
 .hero-tint {
@@ -401,6 +412,7 @@ button[type="submit"]:hover,
 
 .thursday { left: 9.6%; }
 .friday { left: 11.5%; }
+.saturday { left: 10%; }
 
 .timeline {
   list-style: none;
