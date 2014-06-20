@@ -22,6 +22,7 @@ body {
 
 a {
   color: #00adee;
+  font-size: 1em;
   text-decoration: none;
 }
 
@@ -40,9 +41,11 @@ hr {
   border: 0;
   border-top: 1px solid #ecebeb;
   height: 0;
-  margin: 1.8em auto;
+  margin: 1em auto;
   width: 30px
 }
+
+.homepage-margin { margin: 1.8em auto; }
 
 .full-width { width: 100%; }
 
@@ -90,6 +93,12 @@ h5 {
   font-size: 1em;
   margin-right: 2%;
   text-transform: uppercase;
+}
+
+/*h5 title for multiple speakers*/
+.title-speakers {
+  display: block;
+  margin: 0;
 }
 
 h6 {
@@ -345,10 +354,16 @@ button[type="submit"]:hover,
 }
 
 /* =================================
-  SCHEDULE - TIMELINE
+  TWITTER STYLING
    ============================== */
 
+.twitter-box { margin-top: 1em; }
+
 .twitter-link { vertical-align: top; }
+
+/* =================================
+  SCHEDULE - TIMELINE
+   ============================== */
 
 .date {
   color: #888;
@@ -360,7 +375,7 @@ button[type="submit"]:hover,
 .time {
   background: #fff;
   font-weight: 300;
-  left: 10%;
+  left: 9.3%;
   top: 0;
   position: absolute;
 }
@@ -376,6 +391,15 @@ button[type="submit"]:hover,
   position: absolute;
 }
 
+.all-day {
+  background: #fff;
+  font-weight: 300;
+  left: 12.3%;
+  top: 0;
+  position: absolute;
+}
+
+.thursday { left: 9.6%; }
 .friday { left: 11.5%; }
 
 .timeline {
@@ -434,14 +458,26 @@ button[type="submit"]:hover,
   SECTIONS
    ============================== */
 
-section {
+.white {
+  background: #fff;
   border-bottom: 1px solid #ecebeb;
   padding: 4em 0;
 }
 
-.white { background: #fff; }
-.grey { background: #e3e3e3; }
-.pattern { background-image: url("../images/pattern.jpg"); }
+.grey {
+  background: #e3e3e3;
+  padding: 4em 0;
+}
+.pattern {
+  background-image: url("../images/pattern.jpg");
+  border-bottom: 1px solid #ecebeb;
+  padding: 4em 0;
+}
+
+.schedule-white {
+  background: #fff;
+  padding-top: 4em;
+}
 
 @media only screen and (max-width: 600px) {
   .white, .grey, .pattern { padding: 1.5em 0; }
@@ -512,6 +548,8 @@ footer p {
 /* =================================
   UTILITIES
    ============================== */
+.padding-none { padding: 0; }
+.padding-bottom-none { padding-bottom: 0; }
 
 .center {
   margin: 0 auto;
