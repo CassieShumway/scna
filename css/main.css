@@ -72,7 +72,6 @@ h1 {
 }
 
 h2 { font-size: 1.7em; }
-
 h3 { font-size: 1.3em; }
 
 h4 {
@@ -81,22 +80,22 @@ h4 {
 }
 
 h5, h6 {
+  font-weight: 300;
   margin: 0;
-  margin-bottom: 1em;
-  text-align: left;
 }
 
 h5 {
-  color: #888;
+  color: #2d2d2d;
+  display: inline-block;
   font-size: 1em;
-  font-weight: 600;
+  margin-right: 2%;
   text-transform: uppercase;
 }
 
 h6 {
   color: #888;
   font-size: 1.1em;
-  font-weight: 300;
+  margin-bottom: 1em;
 }
 
 p {
@@ -246,7 +245,7 @@ nav li {
   z-index: 100;
 }
 
-@media (max-width: 600px) { .hero-image { padding: 3em 0; } }
+@media only screen and (max-width: 600px) { .hero-image { padding: 3em 0; } }
 
 /* =================================
   HOMEPAGE - BUTTONS
@@ -336,7 +335,7 @@ button[type="submit"],
 button[type="submit"]:hover,
 .submit-button:hover { background: #6d6d6d; }
 
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   form {
     display: inline-block;
     margin-top: 1em;
@@ -349,32 +348,35 @@ button[type="submit"]:hover,
   SCHEDULE - TIMELINE
    ============================== */
 
+.twitter-link { vertical-align: top; }
+
 .date {
   color: #888;
   font-weight: 600;
   font-size: .9em;
+  text-transform: uppercase;
 }
-
-.speaker {
-  display: inline-block;
-  /*height: 100%;
-  width: 100%;*/
-  margin: 0;
-  max-width: 160px;
-  /*position: relative;*/
-  left: 12%;
-  top: 7%;
-  position: absolute;
-}
-
-.bob { background-image: url("../images/speaker-bob.png") no-repeat; }
 
 .time {
   background: #fff;
+  font-weight: 300;
   left: 10%;
   top: 0;
   position: absolute;
 }
+
+.day {
+  background: #fff;
+  color: #00adee;
+  font-size: .9em;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  top: 0;
+  position: absolute;
+}
+
+.friday { left: 11.5%; }
 
 .timeline {
   list-style: none;
@@ -398,6 +400,7 @@ button[type="submit"]:hover,
 .timeline-box {
   margin: 0 0 2em 40%;
   position: relative;
+  text-align: left;
 }
 
 .timeline-text {
@@ -437,11 +440,11 @@ section {
 }
 
 .white { background: #fff; }
-.grey-section { background: #e3e3e3; }
+.grey { background: #e3e3e3; }
 .pattern { background-image: url("../images/pattern.jpg"); }
 
-@media (max-width: 600px) {
-  .white-section, .grey-section, .pattern-section { padding: 1.5em 0; }
+@media only screen and (max-width: 600px) {
+  .white, .grey, .pattern { padding: 1.5em 0; }
 }
 
 /* =================================
@@ -470,7 +473,7 @@ section {
   max-width: 310px;
 }
 
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   .column {
     float: none;
     margin-left: 0;
@@ -520,6 +523,8 @@ footer p {
 .margin-bottom { margin-bottom: 4em; }
 .margin-bottom-small { margin-bottom: .7em; }
 .margin-bottom-none { margin-bottom: 0; }
+
+@media only screen and (max-width: 900px) { .margin-bottom { margin-bottom: 1em; } }
 
 /* =================================
   CLEAR FIX
