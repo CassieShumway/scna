@@ -74,6 +74,7 @@ h1 {
   font-size: 2.1em;
   line-height: 0.8em;
   margin-bottom: .5em;
+  text-align: center;
 }
 
 h2 { font-size: 1.5em; }
@@ -141,14 +142,11 @@ li { list-style: none; }
   max-width: 1200px;
 }
 
-/*.medium { max-width: 370px; }*/
-
-
 .medium { max-width: 500px; }
 
-.xsmall { max-width: 200px; }
-
 .sponsor-wrap { max-width: 379px; }
+
+@media only screen and (max-width: 440px) { .sponsor-wrap { font-size: .9em; } }
 
 /* =================================
   NAVIGATION
@@ -242,6 +240,7 @@ nav li {
 .homepage-hero { background-image: url("../images/scna-hero.jpg"); }
 .sponsors-hero { background-image: url("../images/hero2.jpg"); }
 .sponsors-hero-two { background-image: url("../images/hero4.jpg"); }
+.location-hero { background-image: url("../images/google-map-blk.jpg"); }
 
 .hero-tint {
   position: absolute;
@@ -525,16 +524,14 @@ button[type="submit"]:hover,
 .white {
   background: #fff;
   border-bottom: 1px solid #ecebeb;
+  margin: 0 auto;
   padding: 4em 0;
 }
 
-.grey {
-  background: #e3e3e3;
-  padding: 4em 0;
-}
 .pattern {
   background-image: url("../images/pattern.jpg");
   border-bottom: 1px solid #ecebeb;
+  margin: 0 auto;
   padding: 4em 0;
   text-align: center;
 }
@@ -614,10 +611,7 @@ footer p {
 .padding-none { padding: 0; }
 .padding-bottom-none { padding-bottom: 0; }
 
-.center {
-  margin: 0 auto;
-  text-align: center;
-}
+.center { text-align: center; }
 
 .left { text-align: left; }
 
