@@ -501,14 +501,6 @@ button[type="submit"]:hover,
   position: relative;
 }
 
-.map-marker {
-  display: inline-block;
-  max-width: 17px;
-  margin-bottom: 0;
-  margin-right: 5px;
-  vertical-align: top;
-}
-
 .pin {
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
@@ -522,7 +514,8 @@ button[type="submit"]:hover,
   line-height: 0;
   margin-right: 5px;
   padding: 0px 15px 22px 0;
-  vertical-align: middle;
+  padding-top: 9px;
+  vertical-align: top;
 }
 
 /* =================================
@@ -616,6 +609,8 @@ footer p {
 /* =================================
   UTILITIES
    ============================== */
+.font-one-em { font-size: 1em; }
+
 .padding-none { padding: 0; }
 .padding-bottom-none { padding-bottom: 0; }
 
