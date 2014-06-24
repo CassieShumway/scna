@@ -77,7 +77,10 @@ h1 {
   text-align: center;
 }
 
-h2 { font-size: 1.5em; }
+h2 {
+  font-size: 1.5em;
+  text-align: center;
+}
 
 h3 { font-size: 1.3em; }
 
@@ -485,14 +488,16 @@ button[type="submit"]:hover,
   IMAGES
    ============================== */
 
-/*homepage logo, diamond images, media sponsors logo*/
+/*homepage logo, diamond images*/
 .primary-size { max-width: 250px; }
 
 /*sponsors logo*/
-.secondary-size { max-width: 100px; }
+.secondary-size { max-height: 70px; }
 
-/*homepage social icons*/
-.social-icons { max-height: 60px; }
+/*homepage social icons, media sponsors logo*/
+.tertiary-size { max-height: 50px; }
+
+/*.secondary-size { max-width: 100px; }*/
 
 .speaker-diamond {
   margin: 0;
@@ -564,7 +569,7 @@ button[type="submit"]:hover,
 .column:first-child { margin-left: 0; }
 
 .two-third { width: 65%; }
-.half { width: 45%; }
+.half { width: 47.5%; }
 .third { width: 30%; }
 .fourth { width: 25%; }
 
