@@ -8,6 +8,11 @@
   box-sizing: border-box;
 }
 
+*, * {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background: #fff;
   color: #2d2d2d;
@@ -62,58 +67,40 @@ img {
   TYPOGRAPHY
    ============================== */
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
   font-weight: 400;
-  margin: 0;
-  margin-bottom: .5em;
+  margin: 0; 
+  margin-bottom: .3em;
+  text-align: center;
   text-transform: uppercase;
 }
 
 h1 {
   color: #00adee;
   font-size: 2.1em;
-  line-height: 0.8em;
-  margin-bottom: .5em;
-  text-align: center;
 }
 
-h2 {
-  font-size: 1.5em;
-  text-align: center;
-}
-
+h2 { font-size: 1.5em; }
 h3 { font-size: 1.3em; }
 
-h4 {
+h4, h5 { 
   font-size: 1.1em;
   font-weight: 600;
+  margin-bottom: .3em;
+  text-transform: uppercase;
 }
-
-h5, h6 { margin: 0; }
 
 h5 {
   color: #888;
   font-size: 1em;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-/*h5 title for multiple speakers*/
-.title-speakers {
-  display: block;
-  margin: 0;
 }
 
 h6 {
   color: #888;
-  font-size: 1.1em;
-  font-weight: 300;
-  margin-bottom: 1em;
-}
-
-p {
-  margin-top: 0;
-  margin-bottom: 0;
+  font-size: 1.2em;
+  font-weight: 400;
+  margin: .4em 0 .7em 0;
+  text-align: center;
 }
 
 p {
@@ -122,16 +109,13 @@ p {
   text-align: left;
 }
 
+.grey-text { color: #888; }
+
 /* =================================
   LISTS
    ============================== */
 
-ul, li {
-  margin: 0;
-  padding: 0;
-}
-
-ul { font-size: 1.2em; }
+ul { font-size: 1.1em; }
 
 li { list-style: none; }
 
@@ -147,8 +131,11 @@ li { list-style: none; }
 
 .medium { max-width: 500px; }
 
-.sponsor-wrap { max-width: 379px; }
+@media only screen and (max-width: 940px) {
+  .wrapper { text-align: center; }
+}
 
+.sponsor-wrap { max-width: 379px; }
 @media only screen and (max-width: 440px) { .sponsor-wrap { font-size: .9em; } }
 
 /* =================================
@@ -175,10 +162,7 @@ nav a {
 }
 nav a:hover { color: #00adee; }
 
-nav ul {
-  float: right;
-  font-size: 1em;
-}
+nav ul { float: right; }
 
 nav li {
   float: left;
@@ -187,15 +171,20 @@ nav li {
   margin-left: 1em;
 }
 
-.nav-logo { float: left; }
-
 .white-logo {
+  display: inline-block;
+  float: left;
   margin-bottom: 0;
   max-width: 70px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 620px) {
   nav { padding-bottom: 1em;}
+
+  .white-logo {
+  display: block;
+  float: none;
+  }
 
   .nav-logo {
     float: 0;
@@ -234,7 +223,7 @@ nav li {
   -o-background-size: cover;
   background-size: cover;
   background-position: center;
-  padding: 11em 0;
+  padding: 8em 0;
   position: relative;
   text-align: center;
   width: 100%;
@@ -312,6 +301,7 @@ form {
   font-weight: 500;
   margin: 0 auto;
   margin-top: 2em;
+  max-width: 300px;
   text-align: left;
 }
 
@@ -354,7 +344,7 @@ button[type="submit"],
 button[type="submit"]:hover,
 .submit-button:hover { background: #6d6d6d; }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 940px) {
   form {
     display: inline-block;
     margin-top: 1em;
@@ -375,113 +365,93 @@ button[type="submit"]:hover,
   SCHEDULE - TIMELINE
    ============================== */
 
-.date {
-  color: #888;
-  font-weight: 600;
-  font-size: .9em;
-  text-transform: uppercase;
-}
-
-.time {
-  background: #fff;
-  font-weight: 300;
-  left: 9.3%;
-  top: 0;
-  position: absolute;
-}
-
-.day {
-  background: #fff;
-  color: #00adee;
-  font-size: .9em;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 1.2em;
-  top: 0;
-  position: absolute;
-}
-
-.subhead {
-  color: #888;
-  font-weight: 300;
-  font-size: 1em;
-}
-
-.all-day {
-  background: #fff;
-  font-weight: 300;
-  left: 12.3%;
-  top: 0;
-  position: absolute;
-}
-
-.thursday { left: 9.6%; }
-.friday { left: 11.5%; }
-.saturday { left: 10%; }
-
 .timeline {
   list-style: none;
-  margin: 0;
+  margin-top: 2em;
   padding: 0;
   position: relative;
 }
 
 .timeline:before {
   background: #ecebeb;
-  content: " ";
-  position: absolute;
-  top: 20px;
-  left: 15%;
-  bottom: 0;
+  color: #ecebeb;
+  content: "";
+  position: absolute; 
+  left: 155px;
   width: 1px;
+  height: 100%;
 }
 
 .timeline li { position: relative; }
 
-.timeline-box {
-  margin: 0 0 2em 40%;
+.time {
+  background: #fff;
+  color: #888;
+  font-size: .9em;
+  font-weight: 400;
+  position: absolute;
+  text-align: right;
+  left: 100px;
+  top: 0;
+}
+
+.mobile-time { display: none;}
+
+.day {
+  background: #fff;
+  color: #888;
+  display: block;
+  font-size: 1.1em;
+  font-weight: 500;
   position: relative;
-  text-align: left;
+  left: 100px;
+  margin-bottom: 2em;
+  top: 0;
+  text-transform: uppercase;
 }
 
-.timeline-text {
-  color: #535353;
-  margin-top: .9em;
-  max-width: 640px;
+.content {
+  margin-bottom: 2em;
+  position: relative;
+  left: 40%;
+  top: 0;
+  width: 100%;
+  max-width: 550px;
 }
-.timeline-text h4 { text-align: left; }
-.timeline-text p { font-size: 1em; }
 
-.grey-text { color: #888; }
+.content a { font-size: 1em; }
+.content p { font-size: 1em; }
+.timeline hr { display: none; }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 940px) {
+  .timeline { text-align: center; }
+  .timeline:before { left: 50%; }
 
-  .speaker-diamond { display: none; }
-
-  .subhead { text-align: center; }
-
- .timeline-box {
-   background: #fff;
-   display: block;
-   margin: 0 auto;
-   position: none;
-   text-align: center;
-   width: 100%;
-   }
-
-  .timeline {
-    border-bottom: 1px solid #ecebeb;
+  .timeline hr { display: block; }
+  .timeline li {
+    margin-bottom: 2em;
+    left: 0;
   }
-  .timeline:before { display: none; }
 
- .day {
-   display: block;
-   position: none;
-   text-align: center;
-   }
+  .day { left: 0; }
 
-  .date { display: block; }
-  .all-day { display: block; }
+  .time { display: none; }
+
+  .mobile-time { 
+    color: #888;
+    display: block; 
+    font-size: .9em;
+    font-weight: 400;
+  }
+
+  .content {
+    background: #fff;
+    left: 0;
+    padding: .5em;
+    max-width: 100%;
+  }
+
+  .content-center { text-align: center; }
 }
 
 /* =================================
@@ -491,18 +461,23 @@ button[type="submit"]:hover,
 /*homepage logo, diamond images*/
 .primary-size { max-width: 250px; }
 
+/*vector diamonds*/
+.secondary-size { max-width: 100px; }
+
 /*sponsors logo*/
-.secondary-size { max-height: 70px; }
+.medium-logo { max-height: 70px; }
 
 /*homepage social icons, media sponsors logo*/
-.tertiary-size { max-height: 50px; }
+.small-logo { max-height: 50px; }
 
-/*.secondary-size { max-width: 100px; }*/
+.schedule-diamond { 
+  display: inline-block;
+  margin-bottom: 0;
+  max-width: 150px; 
+}
 
-.speaker-diamond {
-  margin: 0;
-  max-width: 160px;
-  position: relative;
+@media only screen and (max-width: 940px) {
+  .schedule-diamond { display: none; }
 }
 
 .pin {
@@ -541,11 +516,6 @@ button[type="submit"]:hover,
   text-align: center;
 }
 
-.schedule-white {
-  background: #fff;
-  padding-top: 4em;
-}
-
 @media only screen and (max-width: 600px) {
   .white, .grey, .pattern { padding: 1.5em 0; }
 }
@@ -571,14 +541,30 @@ button[type="submit"]:hover,
 .two-third { width: 65%; }
 .half { width: 47.5%; }
 .third { width: 30%; }
-.fourth { width: 25%; }
+.fourth { width: 21.2%; }
 
-@media only screen and (max-width: 900px) {
+.faq-wrapper {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 610px;
+}
+
+@media only screen and (max-width: 940px) {
+
   .column {
     float: none;
     margin-left: 0;
     width: 100%;
   }
+
+  .fourth {
+    float: left;
+    margin-bottom: 2em;
+    margin-left: 5%;
+    width: 47.5%;
+  }
+
+  .fourth:nth-of-type(3) { margin-left: 0;}
 
   .third {
     margin-bottom: 2em;
@@ -586,9 +572,8 @@ button[type="submit"]:hover,
   }
 
   .third:last-child { margin-bottom: 0; }
+  .third p { text-align: center; }
 }
-
-.vertical-align { vertical-align: middle; }
 
 /* =================================
   FOOTER
@@ -611,6 +596,7 @@ footer p {
 /* =================================
   UTILITIES
    ============================== */
+
 .font-one-em { font-size: 1em; }
 
 .padding-none { padding: 0; }
@@ -624,7 +610,13 @@ footer p {
 .margin-bottom-small { margin-bottom: .7em; }
 .margin-bottom-none { margin-bottom: 0; }
 
-@media only screen and (max-width: 900px) { .margin-bottom { margin-bottom: 1em; } }
+.margin-top-none { margin-top: 0; }
+
+.vertical-align { vertical-align: middle; }
+
+@media only screen and (max-width: 940px) { 
+  .margin-bottom { margin-bottom: 1em; } 
+}
 
 /* =================================
   CLEAR FIX
