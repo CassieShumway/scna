@@ -545,7 +545,7 @@ button[type="submit"]:hover,
 .two-third { width: 65%; }
 .half { width: 47.5%; }
 .third { width: 30%; }
-.fourth { width: 21.2%; }
+.fourth, .dates-fourth { width: 21.2%; }
 
 .faq-wrapper {
   margin: 0 auto;
@@ -561,14 +561,16 @@ button[type="submit"]:hover,
     width: 100%;
   }
 
-  .fourth {
+  .dates-fourth, .fourth {
     float: left;
     margin-bottom: 2em;
     margin-left: 5%;
     width: 47.5%;
   }
 
-  .fourth:nth-of-type(3) { margin-left: 0;}
+  .fourth:nth-of-type(3), .dates-fourth { 
+    margin-left: 0;
+  }
 
   .third {
     margin-bottom: 2em;
@@ -577,6 +579,14 @@ button[type="submit"]:hover,
 
   .third:last-child { margin-bottom: 0; }
   .third p { text-align: center; }
+}
+
+@media only screen and (max-width: 600px) {
+  .fourth { 
+    float: none;
+    margin-left: 0;
+    width: 100%;
+  }
 }
 
 /* =================================
