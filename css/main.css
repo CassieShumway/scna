@@ -136,7 +136,11 @@ li { list-style: none; }
 }
 
 .sponsor-wrap { max-width: 379px; }
-@media only screen and (max-width: 440px) { .sponsor-wrap { font-size: .8em; } }
+
+@media only screen and (max-width: 440px) { 
+  .sponsor-wrap h2 { font-size: 1.3em; }
+  .sponsor-wrap h1 { font-size: 1.8em; } 
+}
 
 /* =================================
   NAVIGATION
